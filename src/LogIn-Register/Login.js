@@ -21,6 +21,7 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       console.log(user)
+      from.reset()
     })
     .catch(error=>{
       console.error('error',error)
@@ -50,8 +51,6 @@ const Login = () => {
    })
   }
  
-
-      
     return (
         <Form  onSubmit={handelSubmit} className='w-50 bg-dark mt-5 p-4 rounded m-auto '>
             <h1 className='text-white'>Log In  </h1>

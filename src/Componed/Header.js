@@ -1,11 +1,13 @@
 
+import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../firebase/UserContext';
 
 const Header = () => {
-    
+    const {user} = useContext(AuthContext)
     return (
       
         <Navbar collapseOnSelect expand="lg" bg="danger" variant="danger">
@@ -14,15 +16,18 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#features" className='fs-5 bold'>FAQ</Nav.Link>
-                <Nav.Link href="#pricing" className='fs-5 bold'>Blog</Nav.Link>
-                <Nav.Link href="#Courses" className='fs-5 bold'>Courses</Nav.Link>
+                <button className='fs-5 bold rounded me-3'><Link to='faq'>FaQ</Link></button>
+                 <button className='fs-5 bold rounded me-3'><Link to='/blog'>Blog</Link></button>
+                <button className='fs-5 bold rounded me-3'><Link to='/courses'>Courses</Link></button>
                 
               </Nav>
               <Nav>
+              { user?
                <button className='btn btn-danger text-dark'><Link to='/Signin' >Sign In</Link></button>
+               :
                <button className='btn btn-danger text-dark'><Link to='/login' >Log In</Link></button>
-             
+               
+             }
                 <Nav.Link eventKey={2} href="#memes">
                   Darkside 
                 </Nav.Link>

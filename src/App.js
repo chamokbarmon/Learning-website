@@ -3,6 +3,7 @@ import './App.css';
 import Main from './Componed/Main';
 import Login from './LogIn-Register/Login';
 import Register from './LogIn-Register/Register';
+import Courses from './Pages/Courses/Courses';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,12 +18,17 @@ function App() {
         {
           path:'/login',
           element:<Login></Login>
+        },
+        {
+          path:'/courses/:id',
+          element:<Courses></Courses>
+          
         }
       ]
     }
   ])
   return (
-    <div className="App">
+    <div >
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

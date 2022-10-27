@@ -15,10 +15,11 @@ const Register = () => {
         const password = from.password.value;
         console.log(email,password,name);
 
-        SignUp(email,password)
+        SignUp(email,password,name)
         .then(result=>{
           const user = result.user;
           console.log(user)
+          from.reset()
         })
         .catch(error=>{
           console.error('error',error)
