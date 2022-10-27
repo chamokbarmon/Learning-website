@@ -5,6 +5,7 @@ import Login from './LogIn-Register/Login';
 import Register from './LogIn-Register/Register';
 import Courses from './Pages/Courses/Courses';
 
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -12,7 +13,7 @@ function App() {
       element:<Main></Main>,
       children:[
         {
-         path:'/Signin',
+         path:'/signin',
          element:<Register></Register>
         },
         {
@@ -20,7 +21,7 @@ function App() {
           element:<Login></Login>
         },
         {
-          path:'/courses/:id',
+          path:'/courses',
           element:<Courses></Courses>
           
         }

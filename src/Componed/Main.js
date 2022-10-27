@@ -12,7 +12,7 @@ const Main = () => {
                 <Row>
                     <Col>
                     <LeftSideShare></LeftSideShare>
-                    </Col>
+                    </Col> 
                     <Col>
                        <Outlet></Outlet>
                     </Col>

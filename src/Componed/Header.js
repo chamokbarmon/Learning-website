@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../firebase/UserContext';
+import { FaLink, FaToggleOff, } from  'react-icons/fa'
 
 const Header = () => {
     const {user} = useContext(AuthContext)
@@ -22,14 +23,15 @@ const Header = () => {
                 
               </Nav>
               <Nav>
-              { user?
-               <button className='btn btn-danger text-dark'><Link to='/Signin' >Sign In</Link></button>
-               :
+              { user?.uid?
                <button className='btn btn-danger text-dark'><Link to='/login' >Log In</Link></button>
                
+               :
+               
+               <button className='btn btn-danger text-dark'><Link to='/signin' >Sign In <FaLink></FaLink> </Link></button>
              }
                 <Nav.Link eventKey={2} href="#memes">
-                  Darkside 
+                  DarkTheme <FaToggleOff className='fs-2'></FaToggleOff>
                 </Nav.Link>
                
               </Nav>
