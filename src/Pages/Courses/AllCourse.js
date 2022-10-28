@@ -1,20 +1,32 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { useLoaderData } from 'react-router';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 const AllCourse = () => {
+    const course = useLoaderData()
+    const {name,picture,title,details} =course;
     return (
+
         <div>
-            <Container>
-                <Row>
-                    <Col>
-                   
-                    </Col>
-                    <Col>
-                    </Col>
-                </Row>
-            </Container>
+            <Card style={{ width: '50rem' }}>
+      <Card.Img variant="top" src={picture} />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+         {title}
+        </Card.Text>
+        <p>{details}</p>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
         </div>
-    );
+    )
+       
+                 
+        
+   
 };
 
 export default AllCourse;

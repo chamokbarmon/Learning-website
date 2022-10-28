@@ -4,6 +4,7 @@ import Main from './Componed/Main';
 import Login from './LogIn-Register/Login';
 import Register from './LogIn-Register/Register';
 import Blog from './Pages/Blog/Blog';
+import AllCourse from './Pages/Courses/AllCourse';
 import Courses from './Pages/Courses/Courses';
 import Faq from './Pages/FaQ/Faq';
 
@@ -36,6 +37,11 @@ function App() {
           path:'/program',
           element:<Courses></Courses>,
           loader:()=>fetch(`http://localhost:5000/program`)
+        },
+        {
+          path:'/program/:id',
+          element:<AllCourse></AllCourse>,
+          loader:({params})=>fetch(`http://localhost:5000/pro/${params.id}`)
         }
       ]
     }

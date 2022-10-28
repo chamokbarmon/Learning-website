@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import './Cards.css';
 const Cards = ({pro}) => {
-    const {name,picture,title} =pro;
+    const {name,picture,title,_id} =pro;
     console.log(pro)
     return (
         <Container>
@@ -18,7 +18,7 @@ const Cards = ({pro}) => {
                   Title: {title}
                 </Card.Text>
                       
-                <button className='btn btn-primary'><Link to='' className='text-white'>See More Details</Link></button>
+                <button className='btn btn-primary'><Link to={`/program/${_id}`} className='text-white'>See More Details</Link></button>
               
             </Card>
                 </Col>
