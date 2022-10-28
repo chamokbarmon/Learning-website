@@ -7,6 +7,7 @@ import Blog from './Pages/Blog/Blog';
 import AllCourse from './Pages/Courses/AllCourse';
 import Courses from './Pages/Courses/Courses';
 import Faq from './Pages/FaQ/Faq';
+import PrivateRoute from './Route/PrivateRoute'
 
 
 
@@ -40,7 +41,7 @@ function App() {
         },
         {
           path:'/program/:id',
-          element:<AllCourse></AllCourse>,
+          element:<PrivateRoute><AllCourse></AllCourse></PrivateRoute>  ,
           loader:({params})=>fetch(`http://localhost:5000/pro/${params.id}`)
         }
       ]

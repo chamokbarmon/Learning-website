@@ -18,7 +18,7 @@ const AllCourse = () => {
          {title}
         </Card.Text>
         <p>{details}</p>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Get premium Access</Button>
       </Card.Body>
     </Card>
         </div>
