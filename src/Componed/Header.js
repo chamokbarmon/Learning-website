@@ -5,10 +5,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../firebase/UserContext';
-import { FaLink, FaToggleOff, } from  'react-icons/fa'
+import {  FaToggleOff, } from  'react-icons/fa'
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
+    const {user,logOut} = useContext(AuthContext)
 
     return (
       
@@ -20,13 +20,22 @@ const Header = () => {
               <Nav className="me-auto">
                 <button className='fs-5 bold rounded me-3'><Link to='/faq'>FaQ</Link></button>
                  <button className='fs-5 bold rounded me-3'><Link to='/blog'>Blog</Link></button>
-                <button className='fs-5 bold rounded me-3'><Link to='/program/id'>Courses</Link></button>
+                <button className='fs-5 bold rounded me-3'><Link to='/program'>Courses</Link></button>
                 
               </Nav>
               <Nav>
               
-                <button className='btn btn-danger text-dark'><Link to='/signin' >Sign In <FaLink></FaLink> </Link></button>
-                <button className='btn btn-danger text-dark'><Link to='/login' >Log In</Link></button>
+                {
+                   user?.uid?
+                   <button onClick={logOut} className='btn btn-danger text-dark'> <Link to='/signout'>SignOut</Link> </button>
+                    :
+                    <div>
+                    <button className='btn btn-danger text-dark'><Link to='/signin' >Sign In  </Link></button>
+                    <button className='btn btn-danger text-dark'><Link to='/login' >Log In</Link></button>
+                     </div>
+                   
+                   
+                }
             
                 <Nav.Link eventKey={2} href="#memes">
                   DarkTheme <FaToggleOff className='fs-2'></FaToggleOff>

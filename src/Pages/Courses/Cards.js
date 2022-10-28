@@ -12,9 +12,9 @@ const Cards = ({pro}) => {
                 <Card style={{ width: '30rem'}}>
               <Card.Img variant="top" src={picture}/>
               <Card.Body>
-                <Card.Title>{name}</Card.Title>
+                <Card.Title>Name :{name}</Card.Title>
                 <Card.Text>
-                  {title}
+                  Title: {title}
                 </Card.Text>
               </Card.Body>
               <Card.Body>

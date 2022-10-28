@@ -33,11 +33,9 @@ function App() {
          element:<Faq></Faq>
         },
         {
-          path:'/program/id',
-          element:<PrivateRoute><Courses></Courses></PrivateRoute>,
+          path:'/program',
+          element:<Courses></Courses>,
           loader:()=>fetch(`http://localhost:5000/program`)
-
-          
         }
       ]
     }

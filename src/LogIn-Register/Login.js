@@ -26,7 +26,7 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       console.log(user)
-      from.reset()
+      from.reset();
       navigate(from,{replace:true})
 
     })
@@ -41,6 +41,7 @@ const Login = () => {
      .then(result=>{
        const user = result.user;
        console.log(user)
+
      })
      .catch(error=>{
        console.error('error',error)
