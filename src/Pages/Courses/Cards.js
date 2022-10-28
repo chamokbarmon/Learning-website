@@ -9,11 +9,11 @@ const Cards = ({pro}) => {
     return (
         <Container className='container-fluid'>
             <Row>
-                <Col className='bg-primary text-white rounded mb-3'>
+                <Col className='bg-primary text-white rounded mb-3 d-none d-lg-block'>
                 <h3>Programm : {name}</h3>
                 <p>{title}</p>
                 </Col>
-                <Col className='cards m-auto mb-5 ms-5'>
+                <Col className='cards m-auto mb-5 ms-5 '>
                 <Card  style={{ width: '50rem'}}>
               <Card.Img variant="top" src={picture}/>
              
