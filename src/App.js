@@ -3,6 +3,7 @@ import './App.css';
 import Main from './Componed/Main';
 import Login from './LogIn-Register/Login';
 import Register from './LogIn-Register/Register';
+import Blog from './Pages/Blog/Blog';
 import Courses from './Pages/Courses/Courses';
 
 
@@ -21,7 +22,11 @@ function App() {
           element:<Login></Login>
         },
         {
-          path:'/program/:id',
+          path:'/blog',
+          element:<Blog></Blog>
+        },
+        {
+          path:'/program/id',
           element:<Courses></Courses>,
           loader:()=>fetch(`http://localhost:5000/program`)
 

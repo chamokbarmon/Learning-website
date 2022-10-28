@@ -25,11 +25,9 @@ const Header = () => {
               </Nav>
               <Nav>
               { user?.uid?
-               <button className='btn btn-danger text-dark'><Link to='/login' >Log In</Link></button>
-               
+                <button className='btn btn-danger text-dark'><Link to='/signin' >Sign In <FaLink></FaLink> </Link></button>
                :
-               
-               <button className='btn btn-danger text-dark'><Link to='/signin' >Sign In <FaLink></FaLink> </Link></button>
+               <button className='btn btn-danger text-dark'><Link to='/login' >Log In</Link></button>
              }
                 <Nav.Link eventKey={2} href="#memes">
                   DarkTheme <FaToggleOff className='fs-2'></FaToggleOff>

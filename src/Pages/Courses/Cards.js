@@ -1,13 +1,16 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import './Cards.css';
 const Cards = ({pro}) => {
     const {name,picture,title} =pro;
     console.log(pro)
     return (
-        <div  className='cards  mb-3 '>
-            <Card style={{ width: '18rem'  }}>
-              <Card.Img variant="top" src={picture} />
+        <Container>
+            <Row>
+                <Col className='cards'>
+                <Card style={{ width: '18rem'}}>
+              <Card.Img variant="top" src={picture}/>
               <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
@@ -18,8 +21,9 @@ const Cards = ({pro}) => {
                
               </Card.Body>
             </Card>
-         
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
