@@ -7,8 +7,12 @@ const Cards = ({pro}) => {
     const {name,picture,title,_id} =pro;
     console.log(pro)
     return (
-        <Container>
+        <Container className='container-fluid'>
             <Row>
+                <Col className='bg-primary text-white rounded mb-3'>
+                <h3>Programm : {name}</h3>
+                <p>{title}</p>
+                </Col>
                 <Col className='cards m-auto mb-5 ms-5'>
                 <Card  style={{ width: '50rem'}}>
               <Card.Img variant="top" src={picture}/>

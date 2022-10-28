@@ -6,6 +6,7 @@ import Register from './LogIn-Register/Register';
 import Blog from './Pages/Blog/Blog';
 import AllCourse from './Pages/Courses/AllCourse';
 import Courses from './Pages/Courses/Courses';
+import Details from './Pages/Courses/Details';
 import Faq from './Pages/FaQ/Faq';
 import PrivateRoute from './Route/PrivateRoute'
 
@@ -41,10 +42,21 @@ function App() {
         },
         {
           path:'/program/:id',
-          element:<PrivateRoute><AllCourse></AllCourse></PrivateRoute>  ,
+          element:<AllCourse></AllCourse>,
+          loader:({params})=>fetch(`http://localhost:5000/pro/${params.id}`)
+        },
+        {
+          path:'/details/:id',
+          element:<PrivateRoute><Details></Details></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:5000/pro/${params.id}`)
         }
       ]
+     
+    },
+    {
+      path:'/',
+      element:<p>page is Not found --- 404</p>
+
     }
   ])
   return (
