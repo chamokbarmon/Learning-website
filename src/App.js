@@ -21,8 +21,10 @@ function App() {
           element:<Login></Login>
         },
         {
-          path:'/courses',
-          element:<Courses></Courses>
+          path:'/program/:id',
+          element:<Courses></Courses>,
+          loader:()=>fetch(`http://localhost:5000/program`)
+
           
         }
       ]

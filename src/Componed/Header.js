@@ -9,6 +9,7 @@ import { FaLink, FaToggleOff, } from  'react-icons/fa'
 
 const Header = () => {
     const {user} = useContext(AuthContext)
+
     return (
       
         <Navbar collapseOnSelect expand="lg" bg="danger" variant="danger">
@@ -19,7 +20,7 @@ const Header = () => {
               <Nav className="me-auto">
                 <button className='fs-5 bold rounded me-3'><Link to='faq'>FaQ</Link></button>
                  <button className='fs-5 bold rounded me-3'><Link to='/blog'>Blog</Link></button>
-                <button className='fs-5 bold rounded me-3'><Link to='/courses'>Courses</Link></button>
+                <button className='fs-5 bold rounded me-3'><Link to='/program/id'>Courses</Link></button>
                 
               </Nav>
               <Nav>
