@@ -5,6 +5,7 @@ import Login from './LogIn-Register/Login';
 import Register from './LogIn-Register/Register';
 import Blog from './Pages/Blog/Blog';
 import Courses from './Pages/Courses/Courses';
+import Faq from './Pages/FaQ/Faq';
 import PrivateRoute from './Route/PrivateRoute';
 
 
@@ -26,6 +27,10 @@ function App() {
         {
           path:'/blog',
           element:<Blog></Blog>
+        },
+        {
+         path:'/faq',
+         element:<Faq></Faq>
         },
         {
           path:'/program/id',
