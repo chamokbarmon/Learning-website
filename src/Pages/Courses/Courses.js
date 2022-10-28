@@ -1,3 +1,4 @@
+import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router";
 import Cards from "./Cards";
 
@@ -5,10 +6,22 @@ import Cards from "./Cards";
 
 const Courses = () => {
     const program = useLoaderData()
-   
     console.log(program)
     return (
-      program.map(pro=><Cards key={pro.id} pro={pro}></Cards>)
+    <Container>
+      <Row>
+        <Col>
+        {
+          program.map(pro=><Cards key={pro.id} pro={pro}></Cards>)
+        }
+       
+        </Col>
+      </Row>
+    </Container>
+   
+   
+   
+    
     
     )
     

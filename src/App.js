@@ -6,7 +6,7 @@ import Register from './LogIn-Register/Register';
 import Blog from './Pages/Blog/Blog';
 import Courses from './Pages/Courses/Courses';
 import Faq from './Pages/FaQ/Faq';
-import PrivateRoute from './Route/PrivateRoute';
+
 
 
 

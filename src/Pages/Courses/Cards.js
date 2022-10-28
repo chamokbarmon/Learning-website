@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import './Cards.css';
 const Cards = ({pro}) => {
     const {name,picture,title} =pro;
@@ -8,18 +9,17 @@ const Cards = ({pro}) => {
     return (
         <Container>
             <Row>
-                <Col className='cards'>
-                <Card style={{ width: '30rem'}}>
+                <Col className='cards m-auto mb-5 ms-5'>
+                <Card  style={{ width: '50rem'}}>
               <Card.Img variant="top" src={picture}/>
-              <Card.Body>
+             
                 <Card.Title>Name :{name}</Card.Title>
                 <Card.Text>
                   Title: {title}
                 </Card.Text>
-              </Card.Body>
-              <Card.Body>
-               
-              </Card.Body>
+                      
+                <button className='btn btn-primary'><Link to='' className='text-white'>See More Details</Link></button>
+              
             </Card>
                 </Col>
             </Row>
