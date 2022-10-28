@@ -12,11 +12,11 @@ const LeftSideShare = () => {
  
     },[])
     return (
-        <div className='bg-black rounded p-2 text-white'>
+        <div className='bg-success rounded p-2 text-white'>
             <h4>All Courses : {courses.length}</h4>
             {
                 courses.map(course=><p key={course.id}>
-                    <Link to={`/courses/${course.id}`}>{course.name}</Link>
+                    <Link className='text-white' to={`/courses/${course.id}`}>{course.name}</Link>
                 </p>)
             }
         </div>

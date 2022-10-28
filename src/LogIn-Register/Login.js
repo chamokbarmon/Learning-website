@@ -2,8 +2,13 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../firebase/UserContext';
 const Login = () => {
+     const navigate = useNavigate()
+     const location = useLocation()
+
+     const from = location.state?.from?.pathname||'/'
    
   const {SignUp,GoogleProvider,GithubProvider} = useContext(AuthContext)
   
@@ -22,6 +27,8 @@ const Login = () => {
       const user = result.user;
       console.log(user)
       from.reset()
+      navigate(from,{replace:true})
+
     })
     .catch(error=>{
       console.error('error',error)

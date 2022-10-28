@@ -5,6 +5,8 @@ import Login from './LogIn-Register/Login';
 import Register from './LogIn-Register/Register';
 import Blog from './Pages/Blog/Blog';
 import Courses from './Pages/Courses/Courses';
+import PrivateRoute from './Route/PrivateRoute';
+
 
 
 function App() {
@@ -27,7 +29,7 @@ function App() {
         },
         {
           path:'/program/id',
-          element:<Courses></Courses>,
+          element:<PrivateRoute><Courses></Courses></PrivateRoute>,
           loader:()=>fetch(`http://localhost:5000/program`)
 
           

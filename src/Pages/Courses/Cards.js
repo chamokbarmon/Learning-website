@@ -9,7 +9,7 @@ const Cards = ({pro}) => {
         <Container>
             <Row>
                 <Col className='cards'>
-                <Card style={{ width: '18rem'}}>
+                <Card style={{ width: '30rem'}}>
               <Card.Img variant="top" src={picture}/>
               <Card.Body>
                 <Card.Title>{name}</Card.Title>
