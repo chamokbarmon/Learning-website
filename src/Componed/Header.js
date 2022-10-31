@@ -20,7 +20,7 @@ const Header = () => {
               <Nav className="me-auto">
                 <button className='fs-5 bold rounded me-3'><Link to='/faq'>FaQ</Link></button>
                  <button className='fs-5 bold rounded me-3'><Link to='/blog'>Blog</Link></button>
-                <button className='fs-5 bold rounded me-3'><Link to='/program'>Courses</Link></button>
+                <button className='fs-5 bold rounded me-3'><Link to='/program/id'>Courses</Link></button>
                 
               </Nav>
               <Nav>

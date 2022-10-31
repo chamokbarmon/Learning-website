@@ -36,19 +36,19 @@ function App() {
          element:<Faq></Faq>
         },
         {
-          path:'/program',
+          path:'/program/id',
           element:<Courses></Courses>,
-          loader:()=>fetch(`http://localhost:5000/program`)
+          loader:()=>fetch(`https://programming-course-server-gamma.vercel.app/program`)
         },
         {
           path:'/program/:id',
           element:<AllCourse></AllCourse>,
-          loader:({params})=>fetch(`http://localhost:5000/pro/${params.id}`)
+          loader:({params})=>fetch(`https://programming-course-server-gamma.vercel.app/pro/${params.id}`)
         },
         {
           path:'/details/:id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/pro/${params.id}`)
+          loader:({params})=>fetch(`https://programming-course-server-gamma.vercel.app/pro/${params.id}`)
         }
       ]
      
